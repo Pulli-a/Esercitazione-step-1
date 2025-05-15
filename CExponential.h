@@ -1,10 +1,10 @@
 /*! @file CExponential.h
 	@brief A class for exponential functions 
 	@author Alessandro Maryni
-
-	The exponential has the form:
-	y = k * b^(cx)
-	@note b MUST be a positive value
+										\n
+	The exponential has the form:		\n
+	y = k * b^(cx)						\n
+	@note b MUST be a positive value	\n
 */ 
 
 #ifndef _EXPONENTIAL_H
@@ -24,7 +24,8 @@ double b_coeff  	per memorizzare la base b
 
 double  k_coeff	per memorizzare il coefficiente k  
 
-double  c_coeff	per memorizzare il coefficiente c  */
+double  c_coeff	per memorizzare il coefficiente c  
+*/
 
 using namespace std;
 

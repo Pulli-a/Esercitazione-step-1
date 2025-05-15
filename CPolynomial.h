@@ -1,8 +1,6 @@
 /*! @file CPolynomial.h
 	@brief A class for polynomial functions 
 	@author Alessandro Maryni
-
-	Details.
 */ 
 
 

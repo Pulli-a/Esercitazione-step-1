@@ -1,7 +1,15 @@
+/*! @file Logarithmic.cpp
+	@brief implementation of Logarithmic.h functions 
+	@author Mauro Gori & Alessandro Maryni
+											\n
+	Logaritmic has the form:				\n
+	y = k * logb(x)							\n
+*/ 
+
 #include <iostream>
 #include <cmath>
 #include <cstring>
-#include"Logarithmic.h"
+#include"CLogarithmic.h"
 
 using namespace std;
 

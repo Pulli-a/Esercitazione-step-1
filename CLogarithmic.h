@@ -1,11 +1,11 @@
 /*! @file Logarithmic.h
-	@brief classe che implementa una funzione logaritmica, k*logb x
-	@author Mauro Gori
-	aaaaaaaa
+	@brief A class for Logarithmic functions 
+	@author Mauro Gori & Alessandro Maryni
+											\n
+	Logaritmic has the form:				\n
+	y = k * logb(x)							\n
 */ 
-///@param b_coeff base del logaritmo
-///@param k_coeff coefficente
- 
+
 #ifndef LOGARITMICO_H
 #define LOGARITMICO_H
 
