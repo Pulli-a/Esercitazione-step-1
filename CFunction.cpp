@@ -12,7 +12,7 @@
 void Function::ErrorMessage(const char *string) {
 	
 	cout << endl << "[ ERROR ] ";
-	cout << string << endl;
+	cout << string << endl << flush;
 
 }
 
@@ -21,6 +21,6 @@ void Function::ErrorMessage(const char *string) {
 void Function::WarningMessage(const char *string) {
 	
 	cout << endl << "[ WARNING ] ";
-	cout << string << endl;
+	cout << string << endl << flush;
 
 }

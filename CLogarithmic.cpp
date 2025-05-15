@@ -77,7 +77,7 @@ void Logarithmic::impostak(double k){
 ///@param b
 void Logarithmic::impostab(double b){
 	if(b <= 0.0){
-		cout<<"errore impostando base, deve essere >0"<<endl<<flush;
+		ErrorMessage("cannot set base < 0");
 		return;
 	}else{
 		b_coeff = b;
@@ -94,7 +94,7 @@ void Logarithmic::impostacoef(double b, double k){
 		k_coeff = k;
 		return;
 	}else{
-		cout<<"errore impostando base, deve essere >0"<< endl <<flush;
+		ErrorMessage("Cannot set base < 0");
 		return;
 	}
 }
