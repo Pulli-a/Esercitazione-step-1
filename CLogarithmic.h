@@ -6,8 +6,8 @@
 	y = k * logb(x)							\n
 */ 
 
-#ifndef LOGARITMICO_H
-#define LOGARITMICO_H
+#ifndef LOGARITHMIC_H
+#define LOGARITHMIC_H
 
 #include<iostream>
 #include<cmath>
@@ -18,11 +18,11 @@ using namespace std;
 
 class Logarithmic : public Function{
 	protected:
-		double b_coeff;	//base del logaritmo
-		double k_coeff;	//coefficente
+		double b_coeff;
+		double k_coeff;
 	public:
 
-	///@name costruttori, distruttori
+	///@name Constructors and Destructors
 	///@{
 	Logarithmic();
 	Logarithmic(const Logarithmic &l);
@@ -30,25 +30,25 @@ class Logarithmic : public Function{
 	Logarithmic(double b, double k);
 	///@}
 
-	///@name operatori
+	///@name Operators Overloading
 	///@{
 	Logarithmic& operator=(const Logarithmic &l);
 	bool operator==(const Logarithmic &l);
 	///@}
 
-	///@name funzioni getter
+	///@name Getter Functions
 	///@{
 	double GetValue(double in);
 	///@}
 
-	///@name funzioni setter
+	///@name Setter Functions
 	///@{
 	void impostak(double k);
 	void impostab(double b);
 	void impostacoef(double b, double k);
 	///@}
 
-	///@name funzioni debug
+	///@name Debug functions
 	///@{
 	void Dump();
 	///@}
