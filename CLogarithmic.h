@@ -28,6 +28,7 @@ class Logarithmic : public Function{
 	Logarithmic();
 	Logarithmic(const Logarithmic &l);
 	~Logarithmic();
+	Logarithmic(double b, double k);
 	///@}
 	///@name operatori
 	///@{

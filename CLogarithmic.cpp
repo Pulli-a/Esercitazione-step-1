@@ -14,6 +14,12 @@ Logarithmic::Logarithmic(){
 Logarithmic::Logarithmic(const Logarithmic &l){
 	impostacoef(l.b_coeff, l.k_coeff);
 }
+///@brief costruttore non di default
+///@param b parametro base
+///@param k parametro coefficente
+Logarithmic::Logarithmic(double b, double k){
+	impostacoef(b, k);
+}
 ///@brief distruttore di default
 Logarithmic::~Logarithmic(){
 	//non ho puntatori faccio un eliminazione shallow
@@ -40,7 +46,11 @@ bool Logarithmic::operator==(const Logarithmic& l){
 ///@param x
 ///@return y
 double Logarithmic::GetValue(double in){
-	return k_coeff*(log2(in) / log2(b_coeff));
+	if(in > 0){
+		return k_coeff*(log2(in) / log2(b_coeff));
+	}else{
+		ErrorMessage("valore di x in un log puo' essere solo > 0");
+	}
 }
 ///@brief imposta il valore k
 ///@param k
