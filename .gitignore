@@ -1,0 +1,9 @@
+#compiler
+[Cc]ompiler/
+.vscode/
+
+#bin files
+bin/
+*.exe
+
+
