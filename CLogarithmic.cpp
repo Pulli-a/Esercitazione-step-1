@@ -1,6 +1,6 @@
 /*! @file Logarithmic.cpp
 	@brief implementation of Logarithmic.h functions 
-	@author Mauro Gori & Alessandro Maryni
+	@author Mauro Gori
 											\n
 	Logaritmic has the form:				\n
 	y = k * logb(x)							\n
