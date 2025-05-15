@@ -1,8 +1,6 @@
 /*! @file CPolynomial.cpp
 	@brief Implementation of Polynomial class 
-	@author Paolo Gastaldo
-
-	Details.
+	@author Alessandro Maryni
 */ 
 
 

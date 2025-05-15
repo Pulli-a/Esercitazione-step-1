@@ -1,9 +1,9 @@
 /*! @file CExponential.cpp
 	@brief Implementation of Exponential class 
 	@author Alessandro Maryni
-
-	The exponential has the form:
-	y = k * b^(cx)
+										\n
+	The exponential has the form:		\n
+	y = k * b^(cx)						\n
 */ 
 
 #include "CExponential.h"

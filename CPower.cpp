@@ -1,9 +1,9 @@
 /*! @file CPower.cpp
 	@brief Implementation of Power class 
-	@authors Alessandro Maryni & Mauro Gori
-
-	Power has the form:
-	y = k*x^e
+	@authors Alessandro Maryni & Mauro Gori \n
+											\n
+	Power has the form:						\n
+	y = k*x^e								\n
 */ 
 
 #include "CPower.h"
