@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include <cstring>
-#include"Logarithmic.h"
+#include "CLogarithmic.h"
 
 using namespace std;
 
