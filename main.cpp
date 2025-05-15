@@ -1,23 +1,23 @@
 #include "CFunction.h"
 #include "CPolynomial.h"
 #include "CExponential.h"
+#include "CLogarithmic.h"
 
 
 int main(){
-	//Exponential tests
+	Function* array[4];
 	Exponential E1;
 	Exponential E2(1, 2 , 1);
-	Exponential E3(E2);
-
-	E1.Dump();
-	E2.Dump();
-	E3.Dump();
-
-	E3.SetExponential(15, -5, 2);
-
-	double exp2 = E2.GetValue(6);
-	double exp3 = E3.GetValue(2);
-
-	cout << exp2 << "  " << exp3 << endl;
+	Logarithmic L1(10, 5);
+	Logarithmic L2;
+	
+	array[0] = &E1;
+	array[1] = &E2;
+	array[2] = &L1;
+	array[3] = &L2; 
+	
+	for(int i = 0; i < 4; i++){
+		cout<<"valore della funzione in x = 2"<<array[i]->GetValue(2)<<endl<<flush;
+	}
 
 }
