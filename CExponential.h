@@ -2,7 +2,9 @@
 	@brief A class for exponential functions 
 	@author Alessandro Maryni
 
-	Details.
+	The exponential has the form:
+	y = k * b^(cx)
+	@note b MUST be a positive value
 */ 
 
 #ifndef _EXPONENTIAL_H
@@ -14,8 +16,7 @@
 #include <cstring>
 
 /*
-La funzione esponenziale (classe Exponential) è formalizzata come  k×bcx, con b > 0 
-k b^(cx)
+La funzione esponenziale (classe Exponential) è formalizzata come  k×bcx, con b > 0
 
 La classe deve quindi prevedere le seguenti variabili membro:  
 
@@ -65,6 +66,7 @@ public:
 	/// @}
 
 	void Init(const Exponential& e);
+	void Reset();
 
 	/// @name DEBUG 
 	/// @{

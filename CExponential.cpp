@@ -2,7 +2,8 @@
 	@brief Implementation of Exponential class 
 	@author Alessandro Maryni
 
-	Details.
+	The exponential has the form:
+	y = k * b^(cx)
 */ 
 
 #include "CExponential.h"
@@ -90,6 +91,9 @@ void Exponential::SetExponential(double k, double b, double c){
 	c_coeff = c;
 }
 
+
+// ############ OPERATORS ############
+
 /// @brief assign exponential to e
 /// @param e object to confronting class
 /// @return assigned object
@@ -100,7 +104,7 @@ Exponential& Exponential::operator=(const Exponential& e){
 
 /// @brief confrotn two exponential funcitons
 /// @param e 
-/// @return true if the two are equal, else false
+/// @return true if the two have the same k , b , and c. Else false
 bool Exponential::operator==(const Exponential& e){
 	if(e.k_coeff != k_coeff) return false;
 	else if(e.b_coeff != b_coeff) return false;
@@ -114,6 +118,13 @@ bool Exponential::operator==(const Exponential& e){
 void Exponential::Init(const Exponential& e){
 	SetExponential(e.k_coeff, e.b_coeff, e.c_coeff);
 }
+
+/// @brief set all param to 0
+void Exponential::Reset(){
+	SetExponential(0,0,0);
+}
+
+// ############ DEBUG ############
 
 /// @brief print all params
 void Exponential::Dump(){
