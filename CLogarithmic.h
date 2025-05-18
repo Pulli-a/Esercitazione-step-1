@@ -4,6 +4,7 @@
 											\n
 	Logaritmic has the form:				\n
 	y = k * logb(x)							\n
+	By default a logarithmic function has base 10 and coefficent = 0	\n
 */ 
 
 #ifndef LOGARITHMIC_H
@@ -38,16 +39,16 @@ class Logarithmic : public Function{
 
 	///@name Getter Functions
 	///@{
-	/// TODO: implementa GetCoeffi(); con i = b & k
 	double GetValue(double in);
+	double GetCoeffK();
+	double GetCoeffB();
 	///@}
 
 	///@name Setter Functions
 	///@{
-	///TODO: cambia i nomi in inglese : SetCoeffK()
-	void impostak(double k);
-	void impostab(double b);
-	void impostacoef(double b, double k);
+	void SetCoeffK(double k);
+	void SetCoeffB(double b);
+	void SetCoeff(double b, double k);
 	///@}
 
 	///TODO: implementa Reset() e Init(Logarithmic &l) [la init è opzionale]
@@ -55,7 +56,9 @@ class Logarithmic : public Function{
 
 	///@name Debug functions
 	///@{
+	void Init(const Logarithmic& l);
 	void Dump();
+	void Reset();
 	///@}
 	
 };
