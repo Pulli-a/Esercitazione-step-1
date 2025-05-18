@@ -38,15 +38,20 @@ class Logarithmic : public Function{
 
 	///@name Getter Functions
 	///@{
+	/// TODO: implementa GetCoeffi(); con i = b & k
 	double GetValue(double in);
 	///@}
 
 	///@name Setter Functions
 	///@{
+	///TODO: cambia i nomi in inglese : SetCoeffK()
 	void impostak(double k);
 	void impostab(double b);
 	void impostacoef(double b, double k);
 	///@}
+
+	///TODO: implementa Reset() e Init(Logarithmic &l) [la init è opzionale]
+	///l'idea è che il costruttore di copia e operatore= chiamino Init()
 
 	///@name Debug functions
 	///@{

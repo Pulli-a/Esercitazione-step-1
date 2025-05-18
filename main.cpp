@@ -36,9 +36,27 @@ int main(){
 
 	for(int i = 0; i < len; i++){
 		array[i]->Dump();
-		cout << "value in x= -5 : " << array[i]->GetValue(3.) << endl << endl ;
+		cout << "value in x= -5 : " << array[i]->GetValue(-5.) << endl << endl ;
 	}
 
-	return 0;
+	cout << "##########################################" << endl;
 
+	/// operator == tests
+
+	for(int i = 0; i < len-1; i+=2){ //NOTE: the i+=2 is important!
+		array[i] == array[i+1] ? cout << i << "Equal to " << i+1 << endl : cout << i << " NOT Equal to " << i+1 << endl;
+	}
+
+	cout << "##########################################" << endl;
+
+	// operator = tests
+	for(int i = 0; i < len-1; i+=2){ //NOTE: the i+=2 is important!
+		array[i] = array[i+1];
+		array[i]->Dump();
+		array[i+1]->Dump();
+		array[i] == array[i+1] ? cout << i << " Equal to " << i+1 << endl : cout << i << " NOT Equal to  " << i+1 << endl;
+	}
+
+	
+	return 0;
 }

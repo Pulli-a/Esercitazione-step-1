@@ -52,7 +52,6 @@ double Power::GetECoeff(){
 /// @param in point of Power evaluation
 /// @return value of k * in^e
 double Power::GetValue(double in){
-	/// TODO: controlla se con e = 0 viene k
 	return k_coeff * pow(in, e_coeff);
 }
 

@@ -58,7 +58,6 @@ double Exponential::GetCCoeff(){
 /// @param in point of Exponential evaluation
 /// @return value of k*b^(C in)
 double Exponential::GetValue(double in){
-	///TODO: verifica che con c = 0 venga k
 	return k_coeff * pow( b_coeff, (c_coeff * in));
 }
 
