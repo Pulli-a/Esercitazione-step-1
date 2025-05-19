@@ -16,19 +16,19 @@ using namespace std;
 ///@brief Default constructor
 ///@note it sets the base = 10 and coefficent = 0 as default
 Logarithmic::Logarithmic(){
-	SetCoeff(10, 0.0);
+	SetLogarithmic(10, 0.0);
 }
 
 ///@brief Copy-Constructor
 Logarithmic::Logarithmic(const Logarithmic &l){
-	SetCoeff(l.b_coeff, l.k_coeff);
+	SetLogarithmic(l.b_coeff, l.k_coeff);
 }
 
 ///@brief Non-Default Constructor
 ///@param b Base Parameter
 ///@param k Coefficent Parameter
 Logarithmic::Logarithmic(double b, double k){
-	SetCoeff(b, k);
+	SetLogarithmic(b, k);
 }
 
 ///@brief Default Destructor
@@ -67,53 +67,47 @@ double Logarithmic::GetValue(double in){
 }
 ///@brief GetCoeffK returns the k coefficent value
 ///@return k
-double Logarithmic::GetCoeffK(){
+double Logarithmic::GetKCoeff(){
 	return k_coeff;
 }
 ///@brief GetCoeffB returns the b coefficent value
 ///@return b
-double Logarithmic::GetCoeffB(){
+double Logarithmic::GetBCoeff(){
 	return b_coeff;
 }
 
 ///@brief sets the coefficent parameter
 ///@param k
-void Logarithmic::SetCoeffK(double k){
-	k_coeff = k;
+void Logarithmic::SetKCoeff(double k){
+	SetLogarithmic( b_coeff , k);
 }
 
 ///@brief sets the base parameter
 ///@param b
-void Logarithmic::SetCoeffB(double b){
-	if(b <= 0.0){
-		ErrorMessage("cannot set base < 0");
-		return;
-	}else{
-		b_coeff = b;
-		return;
-	}
+void Logarithmic::SetBCoeff(double b){
+	SetLogarithmic( b , k_coeff);
 }
 
 ///@brief sets both the base and coefficent parameters, in that order
 ///@param b
 ///@param k
-void Logarithmic::SetCoeff(double b, double k){
-	if(b > 0.0){
+void Logarithmic::SetLogarithmic(double b, double k){
+	if(b > 0.0 && b != 1){
 		b_coeff = b;
-		k_coeff = k;
-		return;
 	}else{
-		ErrorMessage("Cannot set base < 0");
-		return;
+		ErrorMessage("Cannot set base < 0 or equal to 1,\n\t  b_coef set to 10");
+		b_coeff = 10;
 	}
+	k_coeff = k;
+	return;
 }
 ///@brief initializes the logarithmic functions copying a pre-existing object
 void Logarithmic::Init(const Logarithmic& l){
-	SetCoeff(l.k_coeff, l.b_coeff);
+	SetLogarithmic(l.k_coeff, l.b_coeff);
 }
 ///@brief resets the logarithmic function to default values
 void Logarithmic::Reset(){
-	SetCoeff(10.0, 0.0);
+	SetLogarithmic(10.0, 0.0);
 }
 
 ///@brief data dump

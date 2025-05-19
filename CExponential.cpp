@@ -10,9 +10,9 @@
 
 // ############ CONSTRUCTORS AND DESTRUCTORS ############
 
-/// @brief Default constructor, set all parameter to 0
+/// @brief Default constructor
 Exponential::Exponential() {
-	SetExponential(.0 , .0, .0);
+	SetExponential(.0 , 1., .0);
 }
 
 /// @brief constructor with all exponential parameters
@@ -87,7 +87,12 @@ void Exponential::SetCCoeff( double c){
 /// @note if a b is a negative value the base will be set to 0
 void Exponential::SetExponential(double k, double b, double c){
 	k_coeff = k;
-	b > 0 ? b_coeff = b : b_coeff = 0;
+	if(b > 0){
+		b_coeff = b;
+	}else { 
+		ErrorMessage("B coeff should be > 0,\n\t  b_coeff set to 1"); 
+		b_coeff = 1;
+	}
 	c_coeff = c;
 }
 

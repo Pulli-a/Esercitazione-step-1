@@ -34,29 +34,81 @@ int main(){
 
 	E2.SetBCoeff(-1);
 
+	cout << "##########################################" << endl;
+
 	for(int i = 0; i < len; i++){
 		array[i]->Dump();
 		cout << "value in x= -5 : " << array[i]->GetValue(-5.) << endl << endl ;
 	}
 
-	cout << "##########################################" << endl;
-
-	/// operator == tests
-
-	for(int i = 0; i < len-1; i+=2){ //NOTE: the i+=2 is important!
-		array[i] == array[i+1] ? cout << i << "Equal to " << i+1 << endl : cout << i << " NOT Equal to " << i+1 << endl;
-	}
+	// operator = & operator == tests
 
 	cout << "##########################################" << endl;
 
-	// operator = tests
-	for(int i = 0; i < len-1; i+=2){ //NOTE: the i+=2 is important!
-		array[i] = array[i+1];
-		array[i]->Dump();
-		array[i+1]->Dump();
-		array[i] == array[i+1] ? cout << i << " Equal to " << i+1 << endl : cout << i << " NOT Equal to  " << i+1 << endl;
+	if(!(E1 == E2)){
+		cout << "E1 and E2 are NOT Equal! " << endl;
+		E1 = E2;
+		cout << " Setting E1 = E2 and dumping them " << endl;
+		E1.Dump();
+		E2.Dump();
 	}
-
+	if(!(E1 == E2)){
+		cout << "something is wrong!!! " << endl; 
+	}
 	
+	if(!(L1 == L2)){
+		cout << "L1 and L2 are NOT Equal! " << endl;
+		L1 = L2;
+		cout << " Setting L1 = L2 and dumping them " << endl;
+		
+		L1.Dump();
+		
+		L2.Dump();
+	}
+
+	if(!(L1 == L2)){
+		cout << "something is wrong!!! " << endl; 
+	}
+
+	if(!(P1 == P2)){
+		cout << "P1 and P2 are NOT Equal! " << endl;
+		P1 = P2;
+		cout << " Setting P1 = P2 and dumping them " << endl;
+		
+		P1.Dump();
+		P2.Dump();
+	}
+
+	if(!(P1 == P2)){
+		cout << "something is wrong!!! " << endl; 
+	}
+
+	// testing weir scenarios
+
+	cout << "##########################################" << endl;
+
+	E1.Reset();
+	E1.SetExponential(1, -3, 16);
+	
+	E1.SetExponential(1, 20, 1000000);
+	cout << "20^(1000000*10) = " << E1.GetValue(10) << endl;
+
+	E1.SetExponential(1, 20, -1000000);
+	cout << "20^(-1000000*10) = " << E1.GetValue(10) << endl;
+
+	E1.Dump();
+
+	cout << "##########################################" << endl;
+
+	L1.Reset();
+	L1.SetLogarithmic(1, 10000000000000);
+
+	cout << "10000000000000 * log10(10) = " << L1.GetValue(10) << endl;
+
+	L1.SetLogarithmic(-111111111, -111111111);
+	cout << "-111111111 * log10(10) = " << L1.GetValue(10) << endl;
+
+
+
 	return 0;
 }

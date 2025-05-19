@@ -40,19 +40,16 @@ class Logarithmic : public Function{
 	///@name Getter Functions
 	///@{
 	double GetValue(double in);
-	double GetCoeffK();
-	double GetCoeffB();
+	double GetKCoeff();
+	double GetBCoeff();
 	///@}
 
 	///@name Setter Functions
 	///@{
-	void SetCoeffK(double k);
-	void SetCoeffB(double b);
-	void SetCoeff(double b, double k);
+	void SetKCoeff(double k);
+	void SetBCoeff(double b);
+	void SetLogarithmic(double b, double k);
 	///@}
-
-	///TODO: implementa Reset() e Init(Logarithmic &l) [la init è opzionale]
-	///l'idea è che il costruttore di copia e operatore= chiamino Init()
 
 	///@name Debug functions
 	///@{
